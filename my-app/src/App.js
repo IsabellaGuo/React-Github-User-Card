@@ -15,7 +15,17 @@ class App extends React.Components {
     }
 
     componentDidMount () {
-        
+        Axios
+        .get('https://api.github.com/users/IsabellaGuo')
+        .then (response => {
+            
+            this.setState({
+                name: response.data.name,
+                email: response.data.email,
+                login: response.data.login,
+                avatar: response.data.avatar_url
+            })
+        })
     }
 }
 
