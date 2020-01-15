@@ -7,6 +7,7 @@ const UserCard = (props) =>{
             <p>{props.name}</p>
             <p>{props.login}</p>
             <p>{props.email}</p>
+            <p>{props.location}</p>
             <img src = {props.avatar} />
         </div>
     );
